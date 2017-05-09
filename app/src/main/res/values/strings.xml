@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Robudget</string>
+    <string name="title">Robudget</string>
+    <string name="addTransactionButton">Add Transaction</string>
+    <string name="viewTransactionButton">View Transaction</string>
+    <string name="dataAnalyticsButton">Data Analytics</string>
+    <string name="optionsButton">Options</string>
+    <string name="menuButton">Menu</string>
+    <string name="accountButton">Account</string>
+    <string name="userDisplay">Hello</string>
+
 </resources>
