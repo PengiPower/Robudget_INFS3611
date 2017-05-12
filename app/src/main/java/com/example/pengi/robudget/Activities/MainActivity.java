@@ -13,14 +13,13 @@ import com.example.pengi.robudget.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button login = (Button) findViewById(R.id.loginButton);
-    EditText email = (EditText) findViewById(R.id.emailField);
-    EditText password = (EditText) findViewById(R.id.passwordField);
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        login = (Button) findViewById(R.id.loginButton);
         login.setOnClickListener(createLoginButtonListener());
     }
 
@@ -28,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText email = (EditText) findViewById(R.id.emailField);
+                EditText password = (EditText) findViewById(R.id.passwordField);
                 CharSequence userEmail = email.getText();
                 CharSequence userPassword = password.getText();
 
