@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pengi.robudget.HomeScreen">
+    tools:context="com.example.pengi.robudget.Activities.MainActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="serif"
-        android:text="@string/title"
+        android:text="@string/activity_home"
         android:textAlignment="center"
-        android:textSize="@dimen/title_size"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="36sp"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,19 +24,19 @@
         android:id="@+id/dataAnalyticsButton"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
-        android:text="@string/dataAnalyticsButton"
+        android:layout_marginBottom="100dp"
+        android:text="@string/button_dataAnalytics"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/accountButton" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/viewTransactionButton"
         android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="viewTransactionsButton"
-        android:text="@string/viewTransactionButton"
+        android:text="@string/button_viewTransaction"
         app:layout_constraintBottom_toTopOf="@+id/dataAnalyticsButton"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -47,8 +47,7 @@
         android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="sendMessage"
-        android:text="@string/addTransactionButton"
+        android:text="@string/button_addTransaction"
         app:layout_constraintBottom_toTopOf="@+id/viewTransactionButton"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -59,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:text="@string/menuButton"
+        android:text="@string/button_menu"
         app:layout_constraintBaseline_toBaselineOf="@+id/accountButton"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="16dp" />
@@ -70,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/optionsButton"
+        android:text="@string/button_options"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginEnd="16dp" />
@@ -80,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="@string/accountButton"
+        android:text="@string/button_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
