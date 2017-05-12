@@ -1,11 +1,11 @@
-package com.example.pengi.robudget;
+package com.example.pengi.robudget.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class HomeScreen extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,12 +13,12 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
     }
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, AddTransaction.class);
+        Intent intent = new Intent(this, AddAccountActivity.class);
         startActivity(intent);
     }
 
     public void viewTransactionsButton(View view) {
-        Intent intent = new Intent(this, ViewTransactions.class);
+        Intent intent = new Intent(this, ViewTransactionsActivity.class);
         startActivity(intent);
     }
 }
