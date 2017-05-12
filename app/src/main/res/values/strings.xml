@@ -2,11 +2,31 @@
     <string name="app_name">Robudget</string>
     <string name="title">Robudget</string>
     <string name="addTransactionButton">Add Transaction</string>
-    <string name="viewTransactionButton">View Transaction</string>
+    <string name="viewTransactionButton">View Transactions</string>
     <string name="dataAnalyticsButton">Data Analytics</string>
-    <string name="optionsButton">Options</string>
+    <string name="optionsButton">My Budget</string>
     <string name="menuButton">Menu</string>
     <string name="accountButton">Account</string>
     <string name="userDisplay">Hello</string>
-
+    <string name="backButton">Back</string>
+    <string name="AddButton">Add</string>
+    <string name="transaction_value">Payment Amount</string>
+    <string name="hint_description">Add a Description</string>
+    <string name="descriptionText">Description</string>
+    <string name="add_new_transaction">Add New Transaction</string>
+    <string name="use_existing_transaction" >Use Existing Transaction</string>
+    <string-array name="category">
+        <item>Food/Consumables</item>
+        <item>Entertainment</item>
+        <item>Private Expenses</item>
+        <item>Transportation</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="existing_transactions">
+        <item>Maccas</item>
+        <item>Train ticket</item>
+        <item>Bus ticket</item>
+        <item>Rent</item>
+        <item>Loan repayment</item>
+    </string-array>
 </resources>
