@@ -1,12 +1,25 @@
 <resources>
     <string name="app_name">Robudget</string>
-    <string name="title">Robudget</string>
-    <string name="addTransactionButton">Add Transaction</string>
-    <string name="viewTransactionButton">View Transaction</string>
-    <string name="dataAnalyticsButton">Data Analytics</string>
-    <string name="optionsButton">Options</string>
-    <string name="menuButton">Menu</string>
-    <string name="accountButton">Account</string>
-    <string name="userDisplay">Hello</string>
-
+    <string name="title_activity_login">Sign in</string>
+    <string name="activity_registration">Account Registration</string>
+    <string name="activity_login">Account Login</string>
+    <string name="activity_home">Welcome</string>
+    <!-- text labels -->
+    <string name="label_name">Name:</string>
+    <string name="label_email">Email address:</string>
+    <string name="label_password">Password:</string>
+    <string name="label_password_confirm">Retype password:</string>
+    <!-- button labels -->
+    <string name="button_register">Register</string>
+    <string name="button_login">Login</string>
+    <string name="button_options">Options</string>
+    <string name="button_menu">Menu</string>
+    <string name="button_account">Account</string>
+    <string name="button_addTransaction">Add Transaction</string>
+    <string name="button_viewTransaction">View Transaction</string>
+    <string name="button_dataAnalytics">Data Analytics</string>
+    <!-- texts -->
+    <string name="register_prompt">Do not have an account? Register now</string>
+    <string name="divider_or">OR</string>
+    <string name="register_link">Register</string>
 </resources>
