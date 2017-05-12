@@ -1,8 +1,7 @@
 package com.example.pengi.robudget.Activities;
 
-import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,13 +16,11 @@ public class MainActivity extends AppCompatActivity {
     Button login = (Button) findViewById(R.id.loginButton);
     EditText email = (EditText) findViewById(R.id.emailField);
     EditText password = (EditText) findViewById(R.id.passwordField);
-    int validLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        int validLogin = 0;
         login.setOnClickListener(createLoginButtonListener());
     }
 
@@ -34,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 CharSequence userEmail = email.getText();
                 CharSequence userPassword = password.getText();
 
-                if (isLoginValid(userEmail,userPassword) == true) {
-                    setContentView(R.layout.activity_home_screen);
+                if (isLoginValid(userEmail,userPassword)) {
+                    Intent HomeActivity = new Intent (MainActivity.this, HomeActivity.class);
+                    MainActivity.this.startActivity(HomeActivity);
                 }
                 else {
                     Toast.makeText(MainActivity.this, String.format("Username/password incorrect. Try again"), Toast.LENGTH_SHORT);
