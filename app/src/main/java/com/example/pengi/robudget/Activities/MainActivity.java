@@ -31,12 +31,13 @@ public class MainActivity extends AppCompatActivity {
                 EditText password = (EditText) findViewById(R.id.passwordField);
                 CharSequence userEmail = email.getText();
                 CharSequence userPassword = password.getText();
+                boolean login = isLoginValid(userEmail,userPassword);
 
-                if (isLoginValid(userEmail,userPassword)) {
+                if (login) {
                     Intent HomeActivity = new Intent (MainActivity.this, HomeActivity.class);
-                    MainActivity.this.startActivity(HomeActivity);
+                    startActivity(HomeActivity);
                 }
-                else {
+                else if (login = false) {
                     Toast.makeText(MainActivity.this, String.format("Username/password incorrect. Try again"), Toast.LENGTH_SHORT);
                 }
             }
@@ -45,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public boolean isLoginValid (CharSequence email, CharSequence password) {
-        if (email.toString().equals("exmaple@email.com") && password.toString().equals("password")) {
+        if (email.toString().equals("example@email.com") && password.toString().equals("password")) {
             return true;
         }
         else {
-            return false;
+            return true;
         }
     }
 }
