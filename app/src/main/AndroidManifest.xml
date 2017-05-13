@@ -26,6 +26,17 @@
             android:label="@string/activity_home"
             android:screenOrientation="portrait">
         </activity>
-    </application>
 
+        <activity
+            android:name=".Activities.AddTransactionActivity"
+            android:label="Add Transaction"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".Activities.ViewTransactionActivity"
+            android:label="View Transactions"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
 </manifest>
