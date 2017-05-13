@@ -11,8 +11,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".HomeScreen"
-            android:label="Robudget">
+            android:name=".Activities.MainActivity"
+            android:label="@string/activity_login"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,15 +22,9 @@
         </activity>
 
         <activity
-            android:name=".AddTransaction"
-            android:parentActivityName=".HomeScreen"
-            android:label="Robudget">
-        </activity>
-
-        <activity
-            android:name=".ViewTransactions"
-            android:parentActivityName=".HomeScreen"
-            android:label="Robudget">
+            android:name=".Activities.HomeActivity"
+            android:label="@string/activity_home"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
