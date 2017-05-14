@@ -37,13 +37,20 @@
     <string name="descriptionText">Description</string>
     <string name="add_new_transaction">Add New Transaction</string>
     <string name="use_existing_transaction" >Use Existing Transaction</string>
+    <string name="transaction_title" >Title</string>
+    <string name="transaction_amount" >Amount</string>
+    <string name="transaction_date" >Date</string>
+
     <string-array name="category">
         <item>Food/Consumables</item>
         <item>Entertainment</item>
-        <item>Private Expenses</item>
+        <item>Bills</item>
+        <item>Groceries</item>
         <item>Transportation</item>
+        <item>Personal Purchases</item>
         <item>Other</item>
     </string-array>
+
     <string-array name="existing_transactions">
         <item>Maccas</item>
         <item>Train ticket</item>
@@ -51,4 +58,5 @@
         <item>Rent</item>
         <item>Loan repayment</item>
     </string-array>
+
 </resources>

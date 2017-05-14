@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:weightSum="5"
+    android:clickable="true">
+
+    <TextView
+        android:text="Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_title"
+        tools:text="@string/transaction_title"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:text="Amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_amount"
+        android:textSize="18sp"
+        tools:text="@string/transaction_amount" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_date"
+        android:textSize="18sp"
+        tools:text="@string/transaction_date" />
+</LinearLayout>

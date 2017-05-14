@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.example.pengi.robudget.R;
+
 /**
  * Created by Pengi on 11/05/2017.
  */
