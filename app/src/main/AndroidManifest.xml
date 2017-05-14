@@ -38,5 +38,6 @@
             android:label="View Transactions"
             android:screenOrientation="portrait">
         </activity>
+
     </application>
 </manifest>
