@@ -7,17 +7,17 @@ import java.util.Date;
  */
 
 public class Transactions {
-    private String title;
+    private String category;
     private String description;
     private double amount;
     private java.util.Date date;
 
-    public String getTitle() {
-        return title;
+    public String getCategory() {
+        return category;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getDescription() {

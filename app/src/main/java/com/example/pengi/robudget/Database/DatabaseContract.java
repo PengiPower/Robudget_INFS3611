@@ -11,7 +11,7 @@ public final class DatabaseContract {
 
     public static class TransactionList implements BaseColumns {
         public static final String TABLE_NAME = "transactions";
-        public static final String COLUMN_TITLE = "title";
+        public static final String COLUMN_CATEGORY = "category";
         public static final String COLUMN_DESCRIPTION = "description";
         public static final String COLUMN_AMOUNT = "amount";
         public static final String COLUMN_TIMESTAMP = "timestamp";
