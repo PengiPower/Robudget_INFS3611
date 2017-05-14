@@ -5,21 +5,41 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ListView;
 
+import com.example.pengi.robudget.Adapters.TransactionAdapter;
+import com.example.pengi.robudget.Database.DBHelper;
+import com.example.pengi.robudget.Entities.Transactions;
 import com.example.pengi.robudget.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViewTransactionActivity extends AppCompatActivity {
 
-        private SQLiteDatabase db;
+    private SQLiteDatabase db;
+    DBHelper dbHelper;
+    private TransactionAdapter adapter;
+    private List<Transactions> transactionsList = new ArrayList<>();
+    private ListView list;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_view_transactions);
-        }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_view_transactions);
 
-        public void sendMessage(View view) {
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
-        }
+        dbHelper = new DBHelper(this);
+        transactionsList = dbHelper.getAllTransactions();
+        adapter = new TransactionAdapter(ViewTransactionActivity.this, R.layout.list_item_transactions, transactionsList);
+
+        list = (ListView)findViewById(R.id.transaction_list);
+        list.setAdapter(adapter);
+
     }
+
+    /*public void sendMessage(View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }*/
+
+}
