@@ -10,7 +10,7 @@ public class Transactions {
     private String category;
     private String description;
     private double amount;
-    private java.util.Date date;
+    private long date;
 
     public String getCategory() {
         return category;
@@ -36,11 +36,11 @@ public class Transactions {
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(long date) {
         this.date = date;
     }
 }
