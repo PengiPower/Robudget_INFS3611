@@ -29,6 +29,8 @@
     <string name="button_account_change_password">Change account password</string>
     <string name="button_account_logout">Logout</string>
     <string name="button_account_clear_data">Clear all local data</string>
+    <string name="button_account_card_details">View\/Edit Bank\/Card Details</string>
+    <string name="button_account_deactivate">Deactivate account</string>
     <!-- texts -->
     <string name="register_prompt">Do not have an account? Register now</string>
     <string name="divider_or">OR</string>
@@ -44,6 +46,8 @@
     <string name="transaction_amount" >Amount</string>
     <string name="transaction_date" >Date</string>
     <string name="options_home_screen">Choose default home screen graph</string>
+    <string name="options_notifications">Notifications</string>
+    <string name="options_budget_checkbox">Set budget limit</string>
 
     <!-- string arrays -->
     <string-array name="category">
@@ -76,6 +80,19 @@
         <item>Past year\'s spending</item>
         <item>Compare my spending with others</item>
         <item>See where I can improve my spending</item>
+    </string-array>
+
+    <string-array name="options_notifications_settings">
+        <item>Show mobile notifications</item>
+        <item>Don\'t show notifications</item>
+    </string-array>
+
+    <string-array name="options_budget_limit">
+        <item>per month</item>
+        <item>per week</item>
+        <item>every 3 months</item>
+        <item>every 6 months</item>
+        <item>every year</item>
     </string-array>
 
 </resources>
