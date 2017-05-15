@@ -12,7 +12,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private Button addTransaction;
     private Button viewTransaction;
     private Button analytics;
-    private Button menu;
     private Button account;
     private Button options;
 
@@ -24,14 +23,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         addTransaction = (Button) findViewById(R.id.addTransactionButton);
         viewTransaction = (Button) findViewById(R.id.viewTransactionButton);
         analytics = (Button) findViewById(R.id.dataAnalyticsButton);
-        menu = (Button) findViewById(R.id.menuButton);
         account = (Button) findViewById(R.id.accountButton);
         options = (Button) findViewById(R.id.optionsButton);
 
         addTransaction.setOnClickListener(this);
         viewTransaction.setOnClickListener(this);
         analytics.setOnClickListener(this);
-        menu.setOnClickListener(this);
         account.setOnClickListener(this);
         options.setOnClickListener(this);
     }
@@ -52,10 +49,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dataAnalyticsButton:
                 Intent dataAnalyticsActivity = new Intent (HomeActivity.this, DataAnalyticsActivity.class);
                 HomeActivity.this.startActivity(dataAnalyticsActivity);
-                break;
-            case R.id.menuButton:
-                Intent menuActivity = new Intent (HomeActivity.this, MenuActivity.class);
-                HomeActivity.this.startActivity(menuActivity);
                 break;
             case R.id.accountButton:
                 Intent accountActivity = new Intent (HomeActivity.this, AccountActivity.class);
