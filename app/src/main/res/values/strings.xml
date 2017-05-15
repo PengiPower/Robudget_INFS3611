@@ -29,7 +29,7 @@
     <string name="button_account_change_password">Change account password</string>
     <string name="button_account_logout">Logout</string>
     <string name="button_account_clear_data">Clear all local data</string>
-    <string name="button_account_card_details">View\/Edit Card Details</string>
+    <string name="button_account_card_details">View\/Edit Bank\/Card Details</string>
     <string name="button_account_deactivate">Deactivate account</string>
     <!-- texts -->
     <string name="register_prompt">Do not have an account? Register now</string>
