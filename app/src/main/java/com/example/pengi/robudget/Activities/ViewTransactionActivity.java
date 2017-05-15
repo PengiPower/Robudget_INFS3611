@@ -29,7 +29,7 @@ public class ViewTransactionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_transactions);
 
         dbHelper = new DBHelper(this);
-        transactionsList = dbHelper.getAllTransactions();
+        transactionsList = dbHelper.getAllTransactions(); //causes crashing
         adapter = new TransactionAdapter(ViewTransactionActivity.this, R.layout.list_item_transactions, transactionsList);
 
         list = (ListView)findViewById(R.id.transaction_list);

@@ -51,7 +51,8 @@ public class DBHelper extends SQLiteOpenHelper {
         res.moveToFirst();
         Transactions t = new Transactions();
 
-        Date d = new Date(res.getInt(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP)));
+        Date d = new Date(res.getLong(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP)));
+
 
         while (res.isAfterLast() == false) {
             t.setCategory(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_CATEGORY)));
