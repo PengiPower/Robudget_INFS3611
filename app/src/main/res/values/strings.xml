@@ -16,6 +16,8 @@
     <string name="label_name">Name:</string>
     <string name="label_email">Email address:</string>
     <string name="label_password">Password:</string>
+    <string name="label_old_password">Old Password\:</string>
+    <string name="label_new_password">New Password\:</string>
     <string name="label_password_confirm">Retype password:</string>
     <!-- button labels -->
     <string name="button_register">Register</string>
@@ -48,6 +50,10 @@
     <string name="options_home_screen">Choose default home screen graph</string>
     <string name="options_notifications">Notifications</string>
     <string name="options_budget_checkbox">Set budget limit</string>
+    <string name="account_bank_current">Your current bank is\:</string>
+    <string name="account_card_current">Your registered card number is\:</string>
+    <string name="account_card_new">Add new card\:</string>
+    <string name="account_card_number">Card Number</string>
 
     <!-- string arrays -->
     <string-array name="category">
@@ -61,7 +67,6 @@
     </string-array>
 
     <string-array name="existing_transactions">
-        <item></item>
         <item>Maccas</item>
         <item>Opal top up</item>
         <item>Groceries</item>
