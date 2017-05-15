@@ -47,20 +47,18 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<Transactions> getAllTransactions() {
         ArrayList<Transactions> array_list = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from transactions", null);
+        Cursor res = db.rawQuery("SELECT * FROM transactions", null);
         res.moveToFirst();
-        Transactions t = new Transactions();
 
-        Date d = new Date(res.getLong(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP)));
-
-
-        while (res.isAfterLast() == false) {
-            t.setCategory(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_CATEGORY)));
-            t.setAmount(res.getDouble(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_AMOUNT)));
-            t.setDescription(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_DESCRIPTION)));
-            t.setDate(d);
-            array_list.add(t);
-            res.moveToFirst();
+        if (res.moveToFirst()) {
+            do {
+                Transactions t = new Transactions();
+                t.setCategory(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_CATEGORY)));
+                t.setAmount(res.getDouble(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_AMOUNT)));
+                t.setDescription(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_DESCRIPTION)));
+                t.setDate(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP));
+                array_list.add(t);
+            }  while (res.moveToNext());
         }
         return array_list;
     }
