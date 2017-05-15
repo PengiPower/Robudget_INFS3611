@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
                     Intent HomeActivity = new Intent (MainActivity.this, HomeActivity.class);
                     startActivity(HomeActivity);
                 }
-                else if (login = false) {
-                    Toast.makeText(MainActivity.this, String.format("Username/password incorrect. Try again"), Toast.LENGTH_SHORT);
+                else {
+                    Toast.makeText(MainActivity.this, "Username/password incorrect. Try again", Toast.LENGTH_LONG).show();
                 }
             }
         };
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else {
-            return true;
+            return false;
         }
     }
 }
