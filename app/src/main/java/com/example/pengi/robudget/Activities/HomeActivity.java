@@ -8,10 +8,6 @@ import android.widget.Button;
 
 import com.example.pengi.robudget.R;
 
-/**
- * Created by Pengi on 12/05/2017.
- */
-
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private Button addTransaction;
     private Button viewTransaction;
@@ -40,12 +36,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         options.setOnClickListener(this);
     }
 
+    //TODO: some issues with transitioning screens, not entirely sure why only add trans screen is working atm
+
     @Override
     public void onClick (View v) {
         switch (v.getId()) {
             case R.id.addTransactionButton:
-                Intent addTransactionAcitivity = new Intent (HomeActivity.this, AddTransactionActivity.class);
-                HomeActivity.this.startActivity(addTransactionAcitivity);
+                Intent addTransactionActivity = new Intent (HomeActivity.this, AddTransactionActivity.class);
+                HomeActivity.this.startActivity(addTransactionActivity);
                 break;
             case R.id.viewTransactionButton:
                 Intent viewTransactionActivity = new Intent (HomeActivity.this, ViewTransactionActivity.class);
@@ -64,8 +62,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 HomeActivity.this.startActivity(accountActivity);
                 break;
             case R.id.optionsButton:
-                Intent optionsAcitivty = new Intent (HomeActivity.this, OptionsActivity.class);
-                HomeActivity.this.startActivity(optionsAcitivty);
+                Intent optionsActivity = new Intent (HomeActivity.this, OptionsActivity.class);
+                HomeActivity.this.startActivity(optionsActivity);
                 break;
         }
     }

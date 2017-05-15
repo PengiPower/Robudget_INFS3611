@@ -26,6 +26,9 @@
     <string name="button_addTransaction">Add Transaction</string>
     <string name="button_viewTransaction">View Transaction</string>
     <string name="button_dataAnalytics">Data Analytics</string>
+    <string name="button_account_change_password">Change account password</string>
+    <string name="button_account_logout">Logout</string>
+    <string name="button_account_clear_data">Clear all local data</string>
     <!-- texts -->
     <string name="register_prompt">Do not have an account? Register now</string>
     <string name="divider_or">OR</string>
@@ -40,7 +43,9 @@
     <string name="transaction_title" >Title</string>
     <string name="transaction_amount" >Amount</string>
     <string name="transaction_date" >Date</string>
+    <string name="options_home_screen">Choose default home screen graph</string>
 
+    <!-- string arrays -->
     <string-array name="category">
         <item>Food/Consumables</item>
         <item>Entertainment</item>
@@ -57,6 +62,20 @@
         <item>Bus ticket</item>
         <item>Rent</item>
         <item>Loan repayment</item>
+    </string-array>
+
+    <string-array name="data_analytics">
+        <item>See my spending over time</item>
+        <item>See my spending by category</item>
+        <item>Compare my spending with others</item>
+        <item>See where I can improve my spending</item>
+    </string-array>
+
+    <string-array name="options_home_screen">
+        <item>Past month\'s spending </item>
+        <item>Past year\'s spending</item>
+        <item>Compare my spending with others</item>
+        <item>See where I can improve my spending</item>
     </string-array>
 
 </resources>

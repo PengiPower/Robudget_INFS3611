@@ -84,6 +84,7 @@
             android:layout_marginStart="32dp"
             android:contentDescription="@string/transaction_value"
             android:ems="10"
+            android:hint="@string/transaction_value"
             android:inputType="text"
             android:textSize="@dimen/text_size"
             app:layout_constraintHorizontal_bias="0.0"
