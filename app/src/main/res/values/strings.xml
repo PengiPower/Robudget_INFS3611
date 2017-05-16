@@ -67,6 +67,7 @@
     </string-array>
 
     <string-array name="existing_transactions">
+        <item></item>
         <item>Maccas</item>
         <item>Opal top up</item>
         <item>Groceries</item>

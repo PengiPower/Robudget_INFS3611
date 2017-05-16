@@ -8,9 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.pengi.robudget.Entities.Transactions;
 
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Pengi on 13/05/2017.
@@ -26,13 +25,13 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        final String SQL_CREATE_TRANSACTIONS_TABLE = "CREATE TABLE"+ DatabaseContract.TransactionList.TABLE_NAME + "(" +
-                DatabaseContract.TransactionList._ID + "INTEGER PRIMARY KEY AUTOINCREMENT" +
-                DatabaseContract.TransactionList.COLUMN_CATEGORY + "TEXT NOT NULL, " +
-                DatabaseContract.TransactionList.COLUMN_DESCRIPTION + "TEXT NOT NULL, " +
-                DatabaseContract.TransactionList.COLUMN_AMOUNT + "REAL NOT NULL" +
-                DatabaseContract.TransactionList.COLUMN_TIMESTAMP + "INTEGER NOT NULL" +
-                ");";
+        String SQL_CREATE_TRANSACTIONS_TABLE = "CREATE TABLE"+ DatabaseContract.TransactionList.TABLE_NAME + "(" +
+                DatabaseContract.TransactionList._ID + " INTEGER PRIMARY KEY, " +
+                DatabaseContract.TransactionList.COLUMN_CATEGORY + " TEXT, " +
+                DatabaseContract.TransactionList.COLUMN_DESCRIPTION + " TEXT, " +
+                DatabaseContract.TransactionList.COLUMN_AMOUNT + " TEXT, " +
+                DatabaseContract.TransactionList.COLUMN_TIMESTAMP + " TEXT" +
+                ")";
 
         db.execSQL(SQL_CREATE_TRANSACTIONS_TABLE);
     }
@@ -44,33 +43,33 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //Returns arraylist of all transactions in the DB
-    public ArrayList<Transactions> getAllTransactions() {
-        ArrayList<Transactions> array_list = new ArrayList<>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM transactions", null);
+    public List<Transactions> getAllTransactions() {
+        List<Transactions> array_list = new ArrayList<>();
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM" + DatabaseContract.TransactionList.TABLE_NAME, null);
         res.moveToFirst();
 
         if (res.moveToFirst()) {
             do {
                 Transactions t = new Transactions();
                 t.setCategory(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_CATEGORY)));
-                t.setAmount(res.getDouble(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_AMOUNT)));
+                t.setAmount(Double.parseDouble(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_AMOUNT))));
                 t.setDescription(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_DESCRIPTION)));
-                t.setDate(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP));
+                t.setDate(Long.parseLong(res.getString(res.getColumnIndex(DatabaseContract.TransactionList.COLUMN_TIMESTAMP))));
                 array_list.add(t);
             }  while (res.moveToNext());
         }
         return array_list;
     }
 
-    public boolean insertTransaction (String category, Double amount, String description, int date) {
+    public void insertTransaction (Transactions t) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues content = new ContentValues();
-        content.put("category", category);
-        content.put("amount", amount);
-        content.put("description", description);
-        content.put("date", date);
+        content.put("category", t.getCategory());
+        content.put("amount", t.getAmount());
+        content.put("description", t.getDescription());
+        content.put("date", t.getDate());
         db.insert("transactions", null, content);
-        return true;
+        db.close();
     }
 }

@@ -39,5 +39,19 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity
+            android:name=".Activities.DataAnalyticsActivity"
+            android:label="View Transactions"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".Activities.OptionsActivity"
+            android:label="View Transactions"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
     </application>
 </manifest>

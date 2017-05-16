@@ -37,11 +37,11 @@ public class TransactionAdapter  extends ArrayAdapter<Transactions> {
         TextView category = (TextView) view.findViewById( R.id.transaction_title );
         TextView amount = (TextView) view.findViewById( R.id.transaction_amount);
         TextView date = (TextView) view.findViewById( R.id.transaction_date);
-        Transactions transaction = getItem( pos);
+        Transactions transaction = getItem(pos);
 
         //Formats date
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        Date d = transaction.getDate();
+        Date d = new Date(transaction.getDate());
 
         category.setText( transaction.getCategory() );
         amount.setText(Double.toString(transaction.getAmount()));

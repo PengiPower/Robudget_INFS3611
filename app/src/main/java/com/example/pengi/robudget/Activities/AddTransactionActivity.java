@@ -16,8 +16,6 @@ import com.example.pengi.robudget.Database.DBHelper;
 import com.example.pengi.robudget.Entities.Transactions;
 import com.example.pengi.robudget.R;
 
-import java.util.Date;
-
 /**
  * Created by Pengi on 11/05/2017.
  */
@@ -148,6 +146,7 @@ public class AddTransactionActivity extends Activity implements AdapterView.OnIt
                 t.setDate(System.currentTimeMillis());
                 t.setAmount(Double.parseDouble(amt.getText().toString()));
                 t.setDescription(desc.getText().toString());
+                dbHelper.insertTransaction(t);
                 break;
         }
 

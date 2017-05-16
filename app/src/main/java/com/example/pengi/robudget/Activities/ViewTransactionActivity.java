@@ -1,6 +1,5 @@
 package com.example.pengi.robudget.Activities;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
@@ -10,15 +9,14 @@ import com.example.pengi.robudget.Database.DBHelper;
 import com.example.pengi.robudget.Entities.Transactions;
 import com.example.pengi.robudget.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ViewTransactionActivity extends AppCompatActivity {
 
-    private SQLiteDatabase db;
+    //private SQLiteDatabase db;
     DBHelper dbHelper;
     private TransactionAdapter adapter;
-    private List<Transactions> transactionsList = new ArrayList<>();
+    //private List<Transactions> transactionsList;
     private ListView list;
 
 
@@ -28,7 +26,7 @@ public class ViewTransactionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_transactions);
 
         dbHelper = new DBHelper(this);
-        transactionsList = dbHelper.getAllTransactions(); //causes crashing
+        List<Transactions> transactionsList = dbHelper.getAllTransactions(); //causes crashing
         adapter = new TransactionAdapter(ViewTransactionActivity.this, R.layout.list_item_transactions, transactionsList);
 
         list = (ListView)findViewById(R.id.transaction_list);
